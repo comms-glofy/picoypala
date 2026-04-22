@@ -501,6 +501,14 @@
       font-weight: 500;
     }
 
+    .share-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
     .result-panel {
       padding: 26px;
       display: grid;
@@ -759,8 +767,12 @@
 
           <div class="result-actions">
             <button class="btn btn-primary" id="restartBtn">Volver a empezar</button>
-            <button class="btn btn-secondary" id="shareLinkedinBtn">Compartir en LinkedIn</button>
+            <button class="btn btn-secondary" id="downloadBtn">Descargar resultado</button>
           </div>
+
+          <p class="share-note">
+            Podés compartir tu resultado en LinkedIn descargando la imagen y subiéndola como post.
+          </p>
         </div>
 
         <div class="result-panel">
@@ -924,7 +936,7 @@
     const backIntroBtn = document.getElementById("backIntroBtn");
     const backQuestionBtn = document.getElementById("backQuestionBtn");
     const restartBtn = document.getElementById("restartBtn");
-    const shareLinkedinBtn = document.getElementById("shareLinkedinBtn");
+    const downloadBtn = document.getElementById("downloadBtn");
 
     const questionCount = document.getElementById("questionCount");
     const questionText = document.getElementById("questionText");
@@ -1091,10 +1103,15 @@
       showSection(introSection, "Introducción");
     }
 
-    function shareOnLinkedIn() {
-      const pageUrl = window.location.href;
-      const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
-      window.open(shareUrl, "_blank", "noopener,noreferrer");
+    function downloadResultImage() {
+      if (!resultMeme.src) return;
+
+      const link = document.createElement("a");
+      link.href = resultMeme.src;
+      link.download = `pico-pala-${currentResultLabel ? currentResultLabel.toLowerCase().replace(/\s+/g, "-") : "resultado"}.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
 
     startBtn.addEventListener("click", () => {
@@ -1112,7 +1129,7 @@
 
     backQuestionBtn.addEventListener("click", goBackQuestion);
     restartBtn.addEventListener("click", resetExperience);
-    shareLinkedinBtn.addEventListener("click", shareOnLinkedIn);
+    downloadBtn.addEventListener("click", downloadResultImage);
   </script>
 </body>
 </html>
