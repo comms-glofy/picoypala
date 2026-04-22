@@ -122,6 +122,85 @@
       gap: 28px;
     }
 
+    .definition-quadrants {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.definition-image-card,
+.definition-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  min-height: 255px;
+}
+
+.definition-image-card {
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.definition-image-card img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.definition-card {
+  padding: 26px;
+}
+
+.definition-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.definition-card .label {
+  font-size: 13px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.definition-card h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.definition-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 16px;
+  font-weight: 500;
+}
+.definition-visual-card {
+  min-height: 255px;
+  padding: 18px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.definition-visual-card img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
     .hero-grid {
       grid-template-columns: 1.08fr 0.92fr;
       align-items: center;
@@ -226,14 +305,14 @@
       box-shadow: var(--shadow);
     }
 
-    .hero-card {
-      padding: 28px;
-      display: grid;
-      place-items: center;
-      min-height: 500px;
-      overflow: hidden;
-      position: relative;
-    }
+.hero-card {
+  padding: 36px;
+  display: grid;
+  place-items: center;
+  min-height: 500px;
+  overflow: hidden;
+  position: relative;
+}
 
     .hero-card::before {
       content: "";
@@ -245,10 +324,18 @@
       pointer-events: none;
     }
 
-    .hero-illustration {
-      width: 100%;
-      max-width: 500px;
-    }
+.hero-illustration {
+  width: 100%;
+  max-width: 500px;
+}
+
+.hero-characters {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.28));
+}
 
     .definition-grid {
       grid-template-columns: 1fr 1fr;
@@ -507,21 +594,29 @@
       font-weight: 500;
     }
 
-    @media (max-width: 960px) {
-      .hero-grid,
-      .definition-grid,
-      .result-grid {
-        grid-template-columns: 1fr;
-      }
+@media (max-width: 960px) {
+  .hero-grid,
+  .definition-quadrants,
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
 
-      .hero-grid {
-        min-height: auto;
-      }
+  .hero-grid {
+    min-height: auto;
+  }
 
-      .hero-card {
-        min-height: 380px;
-      }
-    }
+  .hero-card {
+    min-height: 380px;
+  }
+}
+  .hero-grid {
+    min-height: auto;
+  }
+
+  .hero-card {
+    min-height: 380px;
+  }
+}
 
     @media (max-width: 640px) {
       .section {
@@ -590,25 +685,12 @@
         </div>
 
         <div class="hero-card">
-          <svg class="hero-illustration" viewBox="0 0 520 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="20" y="40" width="480" height="320" rx="28" stroke="rgba(255,255,255,0.08)"/>
-            <circle cx="165" cy="200" r="82" fill="#CEFF00" fill-opacity="0.10"/>
-            <circle cx="355" cy="200" r="82" fill="white" fill-opacity="0.05"/>
-            <path d="M130 245C130 211.863 156.863 185 190 185H220V291H190C156.863 291 130 264.137 130 231V245Z" fill="#CEFF00"/>
-            <path d="M215 140L262 93" stroke="#CEFF00" stroke-width="18" stroke-linecap="round"/>
-            <path d="M258 88L286 116" stroke="#CEFF00" stroke-width="18" stroke-linecap="round"/>
-            <circle cx="195" cy="214" r="6" fill="#0f1115"/>
-            <circle cx="220" cy="214" r="6" fill="#0f1115"/>
-            <path d="M191 234C196 239 205 242 214 242C223 242 232 239 237 234" stroke="#0f1115" stroke-width="5" stroke-linecap="round"/>
-            <path d="M328 185H378C409.48 185 435 210.52 435 242V291H378C346.52 291 321 265.48 321 234V192C321 188.134 324.134 185 328 185Z" fill="#D7DCE6"/>
-            <path d="M370 145L370 90" stroke="#D7DCE6" stroke-width="18" stroke-linecap="round"/>
-            <path d="M334 112L408 112" stroke="#D7DCE6" stroke-width="18" stroke-linecap="round"/>
-            <circle cx="364" cy="214" r="6" fill="#0f1115"/>
-            <circle cx="389" cy="214" r="6" fill="#0f1115"/>
-            <path d="M360 234C365 239 374 242 383 242C392 242 401 239 406 234" stroke="#0f1115" stroke-width="5" stroke-linecap="round"/>
-            <path d="M232 238H309" stroke="rgba(255,255,255,0.16)" stroke-width="10" stroke-linecap="round" stroke-dasharray="6 14"/>
-          </svg>
-        </div>
+  <img
+    class="hero-illustration hero-characters"
+    src="https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%26Pala-assets.png"
+    alt="Personajes Pico y Pala"
+  />
+</div>
       </div>
     </section>
 
@@ -618,29 +700,35 @@
           <div class="eyebrow">Antes de empezar</div>
           <h2>¿Qué significa cada una?</h2>
           <p class="lead">
-            No compiten. No se excluyen. Las dos son necesarias para que el trabajo avance de verdad.
+            Las dos son necesarias para que nuestro trabajo avance.
           </p>
         </div>
 
-        <div class="definition-grid">
-          <div class="definition-card">
-            <div class="label">Pico</div>
-            <h3>Activar</h3>
-            <p>
-              Cuando algo necesita moverse, abrir camino, destrabarse o ponerse en marcha.
-              Pico aparece cuando hace falta activar una decisión, una dirección o un próximo paso.
-            </p>
-          </div>
+<div class="definition-quadrants">
+  <div class="definition-image-card">
+    <img src="https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/glofy-pico.png" alt="Pico" />
+  </div>
 
-          <div class="definition-card">
-            <div class="label">Pala</div>
-            <h3>Materializar</h3>
-            <p>
-              Cuando algo necesita volverse concreto, ordenarse o llegar a resultado.
-              Pala aparece cuando hace falta bajar a tierra, ejecutar y hacer que realmente pase.
-            </p>
-          </div>
-        </div>
+  <div class="definition-card definition-card-text">
+    <div class="label">Pico</div>
+    <h3>Activar</h3>
+    <p>
+      Pico aparece cuando hace ponerse en marcha, tomar una decisión o un próximo paso.
+    </p>
+  </div>
+
+  <div class="definition-image-card">
+    <img src="https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/glofy-pala.png" alt="Pala" />
+  </div>
+
+  <div class="definition-card definition-card-text">
+    <div class="label">Pala</div>
+    <h3>Materializar</h3>
+    <p>
+      Pala aparece cuando hace falta bajar a tierra, ejecutar o llegar a un resultado concreto.
+    </p>
+  </div>
+</div>
 
         <div class="definition-actions">
           <button class="btn btn-primary" id="goQuestionsBtn">Continuar</button>
@@ -763,8 +851,8 @@
         text: "Frente a una instancia con presión, te sale más naturalmente…",
         answers: [
           {
-            title: "Marcar el próximo paso clave",
-            desc: "Detectar qué decisión o activación falta para que algo no se frene.",
+            title: "Accionar lo antes posible",
+            desc: "Detectar qué acción o activación falta y luego ver si funciona.",
             pico: 3,
             pala: 1
           },
@@ -780,14 +868,14 @@
         text: "Cuando una idea está buena pero todavía está verde, tu tendencia es…",
         answers: [
           {
-            title: "Darle foco y dirección",
-            desc: "Ayudar a que empiece a moverse con un criterio más claro.",
+            title: "Presentarla",
+            desc: "Hacer una primer entrega para luego pulirla.",
             pico: 3,
             pala: 2
           },
           {
-            title: "Volverla viable",
-            desc: "Encontrar una forma realista de que exista y pueda ponerse en práctica.",
+            title: "Analizarla a fondo",
+            desc: "Revisar todos sus puntos y probabilidades antes de presentarla.",
             pico: 2,
             pala: 3
           }
@@ -814,14 +902,14 @@
         text: "En una conversación de trabajo, tu aporte suele aparecer más cuando…",
         answers: [
           {
-            title: "Hay que mover algo que quedó quieto",
-            desc: "Te sale activar, abrir camino o dar impulso.",
+            title: "Hay que tomar una decisión",
+            desc: "Aparecés cuando hace falta definir un camino o destrabar qué hacer.",
             pico: 3,
             pala: 2
           },
           {
-            title: "Hay que convertir algo en resultado",
-            desc: "Te sale bajar a tierra, ordenar y materializar.",
+            title: "Hay que ejecutar lo acordado",
+            desc: "Aparecés cuando hace falta llevar algo a resultado.",
             pico: 2,
             pala: 3
           }
