@@ -123,83 +123,84 @@
     }
 
     .definition-quadrants {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  align-items: stretch;
-}
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
 
-.definition-image-card,
-.definition-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-  border: 1px solid var(--line);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow);
-  min-height: 255px;
-}
+    .definition-image-card,
+    .definition-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      min-height: 255px;
+    }
 
-.definition-image-card {
-  padding: 20px;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
+    .definition-image-card {
+      padding: 20px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
 
-.definition-image-card img {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
+    .definition-image-card img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
 
-.definition-card {
-  padding: 26px;
-}
+    .definition-card {
+      padding: 26px;
+    }
 
-.definition-card-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+    .definition-card-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-.definition-card .label {
-  font-size: 13px;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
+    .definition-card .label {
+      font-size: 13px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
 
-.definition-card h3 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  letter-spacing: -0.03em;
-  font-weight: 800;
-}
+    .definition-card h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+    }
 
-.definition-card p {
-  color: var(--muted);
-  line-height: 1.7;
-  font-size: 16px;
-  font-weight: 500;
-}
-.definition-visual-card {
-  min-height: 255px;
-  padding: 18px;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
+    .definition-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 16px;
+      font-weight: 500;
+    }
 
-.definition-visual-card img {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
+    .definition-visual-card {
+      min-height: 255px;
+      padding: 18px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .definition-visual-card img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
 
     .hero-grid {
       grid-template-columns: 1.08fr 0.92fr;
@@ -305,14 +306,14 @@
       box-shadow: var(--shadow);
     }
 
-.hero-card {
-  padding: 36px;
-  display: grid;
-  place-items: center;
-  min-height: 500px;
-  overflow: hidden;
-  position: relative;
-}
+    .hero-card {
+      padding: 36px;
+      display: grid;
+      place-items: center;
+      min-height: 500px;
+      overflow: hidden;
+      position: relative;
+    }
 
     .hero-card::before {
       content: "";
@@ -324,18 +325,18 @@
       pointer-events: none;
     }
 
-.hero-illustration {
-  width: 100%;
-  max-width: 500px;
-}
+    .hero-illustration {
+      width: 100%;
+      max-width: 500px;
+    }
 
-.hero-characters {
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.28));
-}
+    .hero-characters {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 18px 40px rgba(0,0,0,0.28));
+    }
 
     .definition-grid {
       grid-template-columns: 1fr 1fr;
@@ -345,33 +346,6 @@
     .definition-header {
       margin-bottom: 26px;
       max-width: 720px;
-    }
-
-    .definition-card {
-      padding: 26px;
-    }
-
-    .definition-card .label {
-      font-size: 13px;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .definition-card h3 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      letter-spacing: -0.03em;
-      font-weight: 800;
-    }
-
-    .definition-card p {
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 16px;
-      font-weight: 500;
     }
 
     .question-wrap {
@@ -504,6 +478,21 @@
       font-weight: 800;
     }
 
+    .result-meme-wrap {
+      margin-bottom: 22px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .result-meme {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
     .result-copy {
       font-size: 17px;
       line-height: 1.7;
@@ -594,29 +583,21 @@
       font-weight: 500;
     }
 
-@media (max-width: 960px) {
-  .hero-grid,
-  .definition-quadrants,
-  .result-grid {
-    grid-template-columns: 1fr;
-  }
+    @media (max-width: 960px) {
+      .hero-grid,
+      .definition-quadrants,
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
 
-  .hero-grid {
-    min-height: auto;
-  }
+      .hero-grid {
+        min-height: auto;
+      }
 
-  .hero-card {
-    min-height: 380px;
-  }
-}
-  .hero-grid {
-    min-height: auto;
-  }
-
-  .hero-card {
-    min-height: 380px;
-  }
-}
+      .hero-card {
+        min-height: 380px;
+      }
+    }
 
     @media (max-width: 640px) {
       .section {
@@ -676,7 +657,7 @@
           <p class="lead">
             Para construir y hacer crecer lo que hacemos, hacen falta las dos.
             <strong>Pico</strong> activa y <strong>Pala</strong> materializa.
-             <strong>Descubrí cómo se combinan en tu forma de trabajar.</strong>
+            <strong>Descubrí cómo se combinan en tu forma de trabajar.</strong>
           </p>
 
           <div class="hero-actions">
@@ -685,12 +666,12 @@
         </div>
 
         <div class="hero-card">
-  <img
-    class="hero-illustration hero-characters"
-    src="https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%26Pala-assets.png"
-    alt="Personajes Pico y Pala"
-  />
-</div>
+          <img
+            class="hero-illustration hero-characters"
+            src="https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%26Pala-assets.png"
+            alt="Personajes Pico y Pala"
+          />
+        </div>
       </div>
     </section>
 
@@ -704,31 +685,31 @@
           </p>
         </div>
 
-<div class="definition-quadrants">
-  <div class="definition-image-card">
-    <img src="https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/glofy-pico.png" alt="Pico" />
-  </div>
+        <div class="definition-quadrants">
+          <div class="definition-image-card">
+            <img src="https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/glofy-pico.png" alt="Pico" />
+          </div>
 
-  <div class="definition-card definition-card-text">
-    <div class="label">Pico</div>
-    <h3>Activar</h3>
-    <p>
-      Pico aparece cuando hace ponerse en marcha, tomar una decisión o un próximo paso.
-    </p>
-  </div>
+          <div class="definition-card definition-card-text">
+            <div class="label">Pico</div>
+            <h3>Activar</h3>
+            <p>
+              Pico aparece cuando hace ponerse en marcha, tomar una decisión o un próximo paso.
+            </p>
+          </div>
 
-  <div class="definition-image-card">
-    <img src="https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/glofy-pala.png" alt="Pala" />
-  </div>
+          <div class="definition-image-card">
+            <img src="https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/glofy-pala.png" alt="Pala" />
+          </div>
 
-  <div class="definition-card definition-card-text">
-    <div class="label">Pala</div>
-    <h3>Materializar</h3>
-    <p>
-      Pala aparece cuando hace falta bajar a tierra, ejecutar o llegar a un resultado concreto.
-    </p>
-  </div>
-</div>
+          <div class="definition-card definition-card-text">
+            <div class="label">Pala</div>
+            <h3>Materializar</h3>
+            <p>
+              Pala aparece cuando hace falta bajar a tierra, ejecutar o llegar a un resultado concreto.
+            </p>
+          </div>
+        </div>
 
         <div class="definition-actions">
           <button class="btn btn-primary" id="goQuestionsBtn">Continuar</button>
@@ -767,12 +748,18 @@
         <div class="result-card">
           <div class="result-kicker">Resultado</div>
           <div class="result-title">Así se combinan en tu forma de trabajar</div>
+
+          <div class="result-meme-wrap">
+            <img id="resultMeme" class="result-meme" src="" alt="Resultado Pico & Pala" />
+          </div>
+
           <p class="result-copy" id="resultCopy">
             Tu lectura personalizada va a aparecer acá.
           </p>
 
           <div class="result-actions">
             <button class="btn btn-primary" id="restartBtn">Volver a empezar</button>
+            <button class="btn btn-secondary" id="shareLinkedinBtn">Compartir en LinkedIn</button>
           </div>
         </div>
 
@@ -917,6 +904,14 @@
       }
     ];
 
+    const resultMemes = {
+      fullPico: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%20%26%20Pala%20te%20ven%20as%C3%AD.png",
+      picoConPala: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%20%26%20Pala%20te%20ven%20as%C3%AD%20(1).png",
+      balanceado: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%20%26%20Pala%20te%20ven%20as%C3%AD%20(2).png",
+      palaConPico: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%20%26%20Pala%20te%20ven%20as%C3%AD%20(3).png",
+      fullPala: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%20%26%20Pala%20te%20ven%20as%C3%AD%20(4).png"
+    };
+
     const stepIndicator = document.getElementById("stepIndicator");
 
     const introSection = document.getElementById("introSection");
@@ -929,6 +924,7 @@
     const backIntroBtn = document.getElementById("backIntroBtn");
     const backQuestionBtn = document.getElementById("backQuestionBtn");
     const restartBtn = document.getElementById("restartBtn");
+    const shareLinkedinBtn = document.getElementById("shareLinkedinBtn");
 
     const questionCount = document.getElementById("questionCount");
     const questionText = document.getElementById("questionText");
@@ -941,12 +937,14 @@
     const palaBar = document.getElementById("palaBar");
     const resultCopy = document.getElementById("resultCopy");
     const resultSummary = document.getElementById("resultSummary");
+    const resultMeme = document.getElementById("resultMeme");
 
     let currentQuestion = 0;
     let picoScore = 0;
     let palaScore = 0;
     let answersHistory = [];
     let renderedOrders = [];
+    let currentResultLabel = "";
 
     function showSection(sectionToShow, label) {
       [introSection, definitionSection, questionSection, resultSection].forEach(section => {
@@ -972,7 +970,7 @@
       questionText.textContent = q.text;
       answersContainer.innerHTML = "";
 
-      const progress = ((currentQuestion) / questions.length) * 100;
+      const progress = (currentQuestion / questions.length) * 100;
       progressBar.style.width = `${progress}%`;
 
       let answersToRender;
@@ -1041,26 +1039,39 @@
 
       let mainCopy = "";
       let summaryCopy = "";
+      let memeSrc = "";
 
       if (picoPercent >= 62) {
+        currentResultLabel = "Manija total";
         mainCopy = "En tu forma de trabajar aparece una inclinación clara a activar. Solés detectar rápido qué necesita dirección, impulso o una definición para ponerse en movimiento, aunque también buscás que eso tenga una bajada concreta.";
         summaryCopy = "Predomina Pico, con presencia real de Pala. Tu aporte suele aparecer cuando hace falta mover, abrir camino y dar arranque a lo importante.";
+        memeSrc = resultMemes.fullPico;
       } else if (picoPercent >= 54) {
+        currentResultLabel = "Arranca fuerte";
         mainCopy = "Tu resultado muestra una combinación dinámica, con una base algo más orientada a activar. Tendés a mover el trabajo con naturalidad, pero sin perder de vista que después hay que convertir eso en algo tangible.";
         summaryCopy = "Pico tiene algo más de peso, pero la materialización también forma parte de tu forma de trabajar.";
+        memeSrc = resultMemes.picoConPala;
       } else if (picoPercent >= 46) {
+        currentResultLabel = "Multi skill";
         mainCopy = "Tu lectura muestra un equilibrio bastante parejo. En vos conviven activación y materialización con un balance flexible, y eso hace que puedas moverte distinto según lo que cada situación necesite.";
         summaryCopy = "Hay un balance real entre Pico y Pala. Tu fortaleza aparece en la combinación entre mover y concretar.";
+        memeSrc = resultMemes.balanceado;
       } else if (picoPercent >= 38) {
+        currentResultLabel = "Labura callado";
         mainCopy = "Tu resultado muestra una combinación dinámica, con una base algo más orientada a materializar. Tendés a bajar a tierra, ordenar y convertir en resultado, aunque también aparece una capacidad clara para activar cuando hace falta.";
         summaryCopy = "Pala tiene algo más de peso, pero Pico también está presente. Tu aporte aparece mucho en concretar sin quedar inmóvil.";
+        memeSrc = resultMemes.palaConPico;
       } else {
+        currentResultLabel = "Modo máquina";
         mainCopy = "En tu forma de trabajar aparece una inclinación clara a materializar. Solés convertir ideas, direcciones o procesos en algo más concreto, ordenado y ejecutable, aunque también contás con una cuota de activación cuando la situación lo pide.";
         summaryCopy = "Predomina Pala, con presencia real de Pico. Tu aporte suele aparecer cuando hace falta bajar a tierra y hacer que algo exista de verdad.";
+        memeSrc = resultMemes.fullPala;
       }
 
       resultCopy.textContent = mainCopy;
       resultSummary.textContent = summaryCopy;
+      resultMeme.src = memeSrc;
+      resultMeme.alt = `Pico & Pala te ven así: ${currentResultLabel}`;
 
       progressBar.style.width = "100%";
       showSection(resultSection, "Resultado");
@@ -1072,9 +1083,18 @@
       palaScore = 0;
       answersHistory = [];
       renderedOrders = [];
+      currentResultLabel = "";
       picoBar.style.width = "0%";
       palaBar.style.width = "0%";
+      resultMeme.src = "";
+      resultMeme.alt = "Resultado Pico & Pala";
       showSection(introSection, "Introducción");
+    }
+
+    function shareOnLinkedIn() {
+      const pageUrl = window.location.href;
+      const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
+      window.open(shareUrl, "_blank", "noopener,noreferrer");
     }
 
     startBtn.addEventListener("click", () => {
@@ -1092,6 +1112,7 @@
 
     backQuestionBtn.addEventListener("click", goBackQuestion);
     restartBtn.addEventListener("click", resetExperience);
+    shareLinkedinBtn.addEventListener("click", shareOnLinkedIn);
   </script>
 </body>
 </html>
