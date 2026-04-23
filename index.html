@@ -564,15 +564,11 @@
       background: linear-gradient(90deg, #7a859f, #d2d8e6);
     }
 
-    .result-summary {
-      padding-top: 6px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.7;
-      font-weight: 500;
-    }
-
+.result-summary {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #fff;
+}
     .result-foot {
       color: var(--muted);
       font-size: 13px;
@@ -796,7 +792,10 @@
             </div>
           </div>
 
-          <div class="result-summary" id="resultSummary"></div>
+<p class="result-copy" id="resultCopy">
+</p>
+
+<div class="result-summary" id="resultSummary"></div>
           <div class="result-foot">
             Pico y Pala no funcionan por separado. La combinación entre activar y materializar
             es parte de lo que hace posible construir juntos.
@@ -917,11 +916,11 @@
     ];
 
     const resultMemes = {
-      fullPico: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%20%26%20Pala%20te%20ven%20as%C3%AD.png",
-      picoConPala: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%20%26%20Pala%20te%20ven%20as%C3%AD%20(1).png",
-      balanceado: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%20%26%20Pala%20te%20ven%20as%C3%AD%20(2).png",
-      palaConPico: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%20%26%20Pala%20te%20ven%20as%C3%AD%20(3).png",
-      fullPala: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/Pico%20%26%20Pala%20te%20ven%20as%C3%AD%20(4).png"
+      fullPico: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/glofy-result1.png",
+      picoConPala: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/glofy-result2.png",
+      balanceado: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/glofy-result3.png",
+      palaConPico: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/glofy-result4.png",
+      fullPala: "https://raw.githubusercontent.com/comms-glofy/glofy-assets/refs/heads/main/glofy-result5.png"
     };
 
     const stepIndicator = document.getElementById("stepIndicator");
@@ -1055,28 +1054,28 @@
 
       if (picoPercent >= 62) {
         currentResultLabel = "Manija total";
-        mainCopy = "En tu forma de trabajar aparece una inclinación clara a activar. Solés detectar rápido qué necesita dirección, impulso o una definición para ponerse en movimiento, aunque también buscás que eso tenga una bajada concreta.";
-        summaryCopy = "Predomina Pico, con presencia real de Pala. Tu aporte suele aparecer cuando hace falta mover, abrir camino y dar arranque a lo importante.";
+        mainCopy = "Laboralmente sos más de activar. Solés detectar rápido qué necesita dirección o una definición para ponerse en movimiento.";
+        summaryCopy = "Predomina Pico, con presencia de Pala. Tu aporte suele aparecer cuando hace falta decidir y dar movimiento.";
         memeSrc = resultMemes.fullPico;
       } else if (picoPercent >= 54) {
         currentResultLabel = "Arranca fuerte";
-        mainCopy = "Tu resultado muestra una combinación dinámica, con una base algo más orientada a activar. Tendés a mover el trabajo con naturalidad, pero sin perder de vista que después hay que convertir eso en algo tangible.";
-        summaryCopy = "Pico tiene algo más de peso, pero la materialización también forma parte de tu forma de trabajar.";
+        mainCopy = "Laboralmente tu accionar se orienta más a activar. Movés los pendientes con naturalidad, pero sin perder de vista que después hay que convertir eso en algo tangible.";
+        summaryCopy = "Pico tiene algo más de peso, pero tu conciencia sobre la materialización (Pala) también forma parte de tu forma de trabajar.";
         memeSrc = resultMemes.picoConPala;
       } else if (picoPercent >= 46) {
         currentResultLabel = "Multi skill";
-        mainCopy = "Tu lectura muestra un equilibrio bastante parejo. En vos conviven activación y materialización con un balance flexible, y eso hace que puedas moverte distinto según lo que cada situación necesite.";
-        summaryCopy = "Hay un balance real entre Pico y Pala. Tu fortaleza aparece en la combinación entre mover y concretar.";
+        mainCopy = "Laboralmente tenés un equilibrio bastante parejo. La flexibilidad te define.";
+        summaryCopy = "Hay un balance entre Pico y Pala. Porque no te definís del todo entre mover y concretar.";
         memeSrc = resultMemes.balanceado;
       } else if (picoPercent >= 38) {
         currentResultLabel = "Labura callado";
-        mainCopy = "Tu resultado muestra una combinación dinámica, con una base algo más orientada a materializar. Tendés a bajar a tierra, ordenar y convertir en resultado, aunque también aparece una capacidad clara para activar cuando hace falta.";
-        summaryCopy = "Pala tiene algo más de peso, pero Pico también está presente. Tu aporte aparece mucho en concretar sin quedar inmóvil.";
+        mainCopy = "Laboralmente sos más de materializar. Tendés a bajar a tierra y convertir en resultados tangibles.";
+        summaryCopy = "Pala tiene algo más de peso, pero Pico también está presente.";
         memeSrc = resultMemes.palaConPico;
       } else {
         currentResultLabel = "Modo máquina";
-        mainCopy = "En tu forma de trabajar aparece una inclinación clara a materializar. Solés convertir ideas, direcciones o procesos en algo más concreto, ordenado y ejecutable, aunque también contás con una cuota de activación cuando la situación lo pide.";
-        summaryCopy = "Predomina Pala, con presencia real de Pico. Tu aporte suele aparecer cuando hace falta bajar a tierra y hacer que algo exista de verdad.";
+        mainCopy = "En tu forma de trabajar aparece una inclinación clara a materializar. Todo lo que se pueda concretar, lo hacés.";
+        summaryCopy = "Agarrar la pala, es lo que te define. Pero sabemos que nada se puede materializar sin Pico, porque tu determinación también te define.";
         memeSrc = resultMemes.fullPala;
       }
 
